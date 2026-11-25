@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: project4
-          image: 265183279684.dkr.ecr.us-east-1.amazonaws.com/project4-devops:21
+          image: 265183279684.dkr.ecr.us-east-1.amazonaws.com/project4-devops:26
           ports:
             - containerPort: 8000
 ---
