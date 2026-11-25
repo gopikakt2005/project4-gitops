@@ -12,6 +12,8 @@ spec:
       labels:
         app: project4
     spec:
+      imagePullSecrets:
+        - name: ecr-secret
       containers:
         - name: project4
           image: 265183279684.dkr.ecr.us-east-1.amazonaws.com/project4-devops:26
@@ -23,9 +25,10 @@ kind: Service
 metadata:
   name: project4-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: project4
   ports:
     - port: 80
       targetPort: 8000
+      nodePort: 30080
